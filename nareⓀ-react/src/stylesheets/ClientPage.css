@@ -1,0 +1,137 @@
+.ClientPage {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 150px 0;
+}
+
+/* =========================== info =========================== */
+.ClientPage .info {
+    width: 550px;
+    margin-right: 5rem;
+}
+
+.ClientPage form {
+    text-align: end;
+    margin-bottom: 30px;
+}
+
+.ClientPage form.childrenForm table {
+    margin-bottom: 30px;
+}
+
+.ClientPage .info form table {
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid var(--slate-700);
+}
+
+.ClientPage .info form table tr:nth-child(odd) {
+    background-color: var(--slate-300);
+}
+
+.ClientPage .info form table,
+.ClientPage .info form table th,
+.ClientPage .info form table td {
+    text-align: left;
+    font-weight: normal;
+    border-collapse: collapse;
+}
+
+.ClientPage .info form table th {
+    width: 300px;
+}
+
+.ClientPage .info form table input {
+    width: 100%;
+    font-size: 1rem;
+    background: none;
+}
+
+.ClientPage .info form .btn {
+    margin: 20px 0;
+}
+
+/* =========================== months =========================== */
+.ClientPage .months .title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    border-radius: 10px;
+    background: var(--slate-700);
+    box-shadow: .3rem .3rem .3rem var(--slate-300);
+}
+
+.ClientPage .title h3 {
+    font-weight: normal;
+    font-size: 1.6rem;
+}
+
+.ClientPage .title .child_name,
+.ClientPage .title .years_title {
+    user-select: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.4rem;
+}
+
+.ClientPage .title .child_container {
+    user-select: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 10px 15px 10px 10px;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    border: 1px solid var(--slate-700);
+    background: var(--white);
+    border-radius: 6px;
+    box-shadow: .1rem .2rem .5rem var(--slate-700);
+}
+
+.ClientPage .title .child_container p,
+.ClientPage .title .years_container p {
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    color: var(--black);
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.ClientPage .title .child_container p:hover,
+.ClientPage .title .years_container p:hover {
+    background: var(--slate-300);
+}
+
+.ClientPage .title .years_container {
+    user-select: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 330px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--slate-700);
+    background: var(--white);
+    border-radius: 6px;
+    box-shadow: .1rem .2rem .5rem var(--slate-700);
+}
+
+.ClientPage .months .months_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: .5rem;
+}
+
+.ClientPage .months .months_container .btn.month {
+    text-transform: capitalize;
+}

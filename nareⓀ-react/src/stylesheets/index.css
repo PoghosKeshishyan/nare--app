@@ -1,0 +1,95 @@
+@import './Header.css';
+@import './Loading.css';
+@import './HomePage.css';
+@import './ClientPage.css';
+@import './CalendarPage.css';
+@import './SendEmailPage.css';
+@import './ProfilePage.css';
+@import './FileSystem.css';
+@import './ContextMenu.css';
+@import './StoryPage.css';
+@import './ModalAddClient.css';
+@import './ModalAddChild.css';
+@import './ModalPaymentConfirm.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+    --white: #ffffff;
+    --white-f2: #f2f2f2;
+    --white-dd: #dddddd;
+    --white-f9: #f9f9f9;
+    --yellow: #FFC000;
+    --black: #000000;
+    --blue: #3873f1;
+    --blue-2: #0000ff;
+    --light-yellow: #FFF2CC;
+    --slate-200: #e2e8f0;
+    --slate-300: #cbd5e1;
+    --slate-700: #334155;
+    --alpha-slate: #2c3746b1;
+    --poppins: "Poppins", sans-serif;
+    --courier: 'Courier New', Courier, monospace;
+}
+
+body {
+    overflow-y: scroll;
+}
+
+.btn {
+    background: var(--light-yellow);
+    color: var(--black);
+    border: 1px solid var(--slate-700);
+    padding: 5px 10px;
+    font-family: var(--poppins);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: .2rem .3rem .5rem var(--slate-300);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn svg {
+    margin-right: 10px;
+}
+
+.btn.home {
+    position: fixed;
+    top: 5%;
+    left: 1%;
+    font-size: 1.2rem;
+    z-index: 1001;
+}
+
+.btn.back {
+    position: fixed;
+    top: 5%;
+    left: 4.5%;
+    font-size: 1.2rem;
+    z-index: 1001;
+}
+
+.btn.home svg,
+.btn.back svg {
+    margin-right: 0;
+}
+
+
+.btn:hover {
+    color: var(--white);
+    background: var(--slate-700);
+}
+
+.btn:active {
+    color: var(--black);
+    background: var(--slate-300);
+}

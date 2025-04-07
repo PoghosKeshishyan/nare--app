@@ -1,0 +1,130 @@
+.SendEmailPage {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 120px;
+    margin-left: 18px;
+}
+
+.SendEmailPage form {
+    margin: 20px 40px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.SendEmailPage form .MessageBox {
+    width: 1000px;
+    margin-right: 6rem;
+}
+
+.SendEmailPage form .form_item input,
+.SendEmailPage form textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 2px solid var(--slate-700);
+}
+
+.SendEmailPage form .form_item textarea {
+    resize: none;
+    height: 45px;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.SendEmailPage form textarea.regards {
+    height: 75px;
+    padding: 10px;
+    resize: none;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.SendEmailPage .container {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid var(--slate-700);
+}
+
+.SendEmailPage .container .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.SendEmailPage .container .title h3 {
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.SendEmailPage .container .title .logo {
+    width: 120px;
+}
+
+.SendEmailPage .container .title .logo img {
+    width: 100%;
+}
+
+.SendEmailPage .container .client_info p {
+    text-decoration: underline;
+    font-size: 1.1rem;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.SendEmailPage .container .child {
+    margin-top: 20px;
+}
+
+.SendEmailPage .container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.SendEmailPage .container table tbody th {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.SendEmailPage .container table tbody tr.total * {
+    background: var(--white);
+}
+
+.SendEmailPage .container table tbody th.total_head {
+    border-right: none;
+}
+
+.SendEmailPage .container table td,
+.SendEmailPage .container table th {
+    border-top: 2px solid var(--slate-300);
+    border-bottom: 2px solid var(--slate-300);
+}
+
+.SendEmailPage .container table th:nth-child(odd),
+.SendEmailPage .container table td:nth-child(odd) {
+    background: var(--slate-200);
+}
+
+.SendEmailPage .container table td {
+    text-align: center;
+}
+
+.SendEmailPage .container table td input {
+    width: 80px;
+    text-align: center;
+    font-size: 1rem;
+    background: none;
+}
+
+/* ========================= actions ========================= */
+.SendEmailPage form .actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.SendEmailPage form .actions button:nth-child(2) {
+    margin: 15px 0;
+}

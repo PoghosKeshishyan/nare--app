@@ -1,0 +1,107 @@
+.ProfilePage {
+    margin: 150px 20px 0 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.ProfilePage .edit_zone {
+    width: 500px;
+    margin-bottom: 40px;
+}
+
+.ProfilePage .editProfile form {
+    text-align: end;
+}
+
+.ProfilePage .editProfile form .inputBox {
+    margin: 10px 0;
+    text-align: left;
+    border-bottom: 1px solid var(--slate-300);
+}
+
+.ProfilePage .editProfile form .inputBox p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ProfilePage .editProfile form .inputBox input[type=text] {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.1rem;
+}
+
+.ProfilePage .editProfile form .inputBox input[type='file'] {
+    display: none;
+}
+
+.ProfilePage .editProfile form .inputBox .image-upload-container {
+    padding: 10px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.ProfilePage .editProfile form .inputBox .image-upload-button {
+    display: inline-block;
+    padding: 8px 16px;
+    color: var(--white);
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    background: var(--blue);
+
+    &:hover {
+        opacity: .8;
+    }
+
+    &:active {
+        background: var(--blue-2);
+    }
+}
+
+.ProfilePage .editProfile form .inputBox .image-upload-label {
+    margin-left: 10px;
+}
+
+.ProfilePage .editProvider {
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.ProfilePage .editProvider p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.ProfilePage .editProvider form {
+    text-align: end;
+}
+
+.ProfilePage .editProvider form table {
+    margin: 20px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--slate-300);
+}
+
+.ProfilePage .editProvider form table, 
+.ProfilePage .editProvider form table th, 
+.ProfilePage .editProvider form table td {
+    text-align: left;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-collapse: collapse;
+}
+
+.ProfilePage .editProvider form table tr:nth-child(odd) {
+    background: var(--slate-300);
+}
+
+.ProfilePage .editProvider form table input {
+    width: 100%;
+    font-size: 1rem;
+    background: none; 
+}

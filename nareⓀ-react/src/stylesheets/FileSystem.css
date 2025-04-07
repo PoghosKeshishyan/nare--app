@@ -1,0 +1,87 @@
+.FileSystem {
+    width: 450px;
+    padding: 20px;
+    margin: 0 8rem;
+    position: relative;
+    user-select: none;
+}
+
+.FileSystem .previous {
+    position: absolute;
+    top: 0;
+    font-size: 1.3rem;
+    width: 35px;
+    height: 33px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+    color: var(--slate-700);
+    -webkit-text-stroke: .3px;
+    transition: all .2s linear;
+    border: 3px solid var(--slate-700);
+}
+
+.FileSystem .previous:hover {
+    color: var(--white);
+    background: var(--slate-700);
+}
+
+.FileSystem .empty_folder {
+    margin: 40px 0 20px 10px;
+}
+
+.FileSystem .empty_folder p {
+    font-size: 1.3rem;
+}
+
+.FileSystem .files-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.FileSystem .files-container .file {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 1.1rem;
+    padding: 5px 0;
+}
+
+.FileSystem .files-container .file .folder,
+.FileSystem .files-container .file .file {
+    font-size: 2rem;
+    margin-right: 10px;
+    padding-left: 10px;
+    color: var(--yellow);
+}
+
+.FileSystem .files-container .file .file {
+    color: var(--slate-700);
+    padding: 0 0 0 15px;
+    font-size: 2rem;
+}
+
+.FileSystem .files-container .file.active,
+.FileSystem .files-container .file.active svg {
+    color: var(--white);
+    background: var(--blue);
+}
+
+.FileSystem .files-container .file input {
+    width: 130%;
+    font-size: 1.1rem;
+}
+
+.FileSystem .btn {
+    display: inline-block;
+    margin: 0 5px 10px 10px;
+    font-size: 1rem;
+}
+
+.FileSystem input[type=file] {
+    display: none;
+}

@@ -1,0 +1,94 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Header {
+  id    String @id @default(uuid())
+  title String
+  logo  String
+}
+
+model Provider {
+  id        String @id @default(uuid())
+  name      String
+  address   String
+  telephone String
+  email     String
+}
+
+model Parent {
+  id        String  @id @default(uuid())
+  name      String
+  address   String
+  telephone String
+  email     String
+  Child     Child[]
+  Week      Week[]
+  Story     Story[]
+}
+
+model Child {
+  id                        String  @id @default(uuid())
+  number_of_hours           Int
+  cost_for_per_hour         String
+  cost_for_extended_minutes String
+  name                      String
+  enrollment                String
+  discharge                 String
+  birth                     String
+  parent                    Parent? @relation(fields: [parent_id], references: [id])
+  parent_id                 String?
+  Week                      Week[]
+}
+
+model Month {
+  id    String @id @default(uuid())
+  month String
+}
+
+model Year {
+  id   String @id @default(uuid())
+  year Int
+}
+
+model Story {
+  id           String  @id @default(uuid())
+  amount       String
+  parent       Parent? @relation(fields: [parent_id], references: [id])
+  parent_id    String?
+  payment_date String
+  year         Int
+}
+
+model Week {
+  id                 String  @id @default(uuid())
+  week               Int
+  month              String
+  year               Int
+  parent             Parent? @relation(fields: [parent_id], references: [id])
+  parent_id          String?
+  child              Child?  @relation(fields: [child_id], references: [id])
+  child_id           String?
+  dates              String
+  total_time_in_week String
+  total_days         Int
+  days               Day[]
+}
+
+model Day {
+  id        String  @id @default(uuid())
+  title     String
+  arrived   String?
+  isGone    String?
+  completed Boolean
+  week      Week    @relation(fields: [week_id], references: [id])
+  week_id   String
+}
